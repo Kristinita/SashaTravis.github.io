@@ -1,0 +1,338 @@
+/*
+* @Author: Kristinita
+* @Date:   2016-12-26 15:48:38
+* @Last Modified by:   Kristinita
+* @Last Modified time: 2017-04-10 18:41:34
+*/
+
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+
+/* For correct Mailhu displayed*/
+
+html,
+main,
+body {
+    height: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    /* Чтобы margin-top для Сашиных икон работал на мобильных устройствах */
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.1875rem;
+    overflow: hidden;
+    /* Чтобы margin-top для Сашиных икон работал на мобильных устройствах*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    /* Чтобы ссылки не подчёркивались */
+}
+
+
+/*
+ * Disable dotted outline, if user move by links use tab key, see
+ * https://css-tricks.com/removing-the-dotted-outline/
+ */
+
+a:focus {
+    outline: 0;
+}
+
+ol,
+ul {
+    list-style-position: inside;
+    /* Чтобы маркеры списка не пропадали на мобильных версиях */
+}
+
+
+/*Отступ от левого края элементов вложенного списка*/
+
+ul li {
+    margin-left: 1rem;
+}
+
+h1 {
+    font-family: 'Истина';
+    font-size: 1.9375rem;
+    font-weight: lighter;
+    font-style: normal;
+    -webkit-filter: brightness(97%);
+    /* Снизить яркость тексту */
+    filter: brightness(97%);
+}
+
+h2 {
+    font-family: 'Мечта';
+    font-size: 1.4rem;
+}
+
+kbd {
+    font-weight: bold;
+    border-radius: 0.1875rem;
+}
+
+noscript > span {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+
+/*
+ * Dd, dt, dl tags
+ * https://webref.ru/html/dd
+ */
+
+dd {
+    font-style: italic;
+}
+
+
+/* Images
+   ========================================================================== */
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Картинка слева */
+
+.leftimg {
+    float: left;
+    /* Картинка слева */
+    margin: 0.3125rem 0.3125rem 0.3125rem 0;
+    /* Расстояние между картинкой и текстом */
+}
+
+
+/* Картинка справа */
+
+.rightimg {
+    float: right;
+    /* Картинка справа */
+    margin: 0.3125rem 0 0.3125rem 0.3125rem;
+    /* Расстояние между картинкой и текстом */
+}
+
+
+/*
+ * Ширина изображения
+ */
+
+.Sasha140 {
+    width: 8.75rem;
+}
+
+.Sasha280 {
+    width: 17.5rem;
+}
+
+.Sasha470 {
+    width: 29.375rem;
+}
+
+.Sasha700 {
+    width: 43.75rem;
+}
+
+
+/* Blockquotes
+   ========================================================================== */
+
+
+/*  Цитата в прямоугольнике */
+
+.SashaBlockquote {
+    padding: 0.25rem;
+    border-width: thick;
+    border-top-style: ridge;
+    border-right-style: groove;
+    border-bottom-style: groove;
+    border-left-style: ridge;
+}
+
+
+/* Эпиграф */
+
+.SashaEpigraph {
+    margin-right: 1rem;
+    margin-left: 3rem;
+    text-align: right;
+}
+
+
+/*
+ * Inscription after epigraph
+ */
+
+.SashaEpigraph > .SashaEpigraphAuthor {
+    line-height: 1rem;
+    margin: 2rem 0;
+}
+
+
+/* Цитата — кавычки сверху и снизу */
+
+sashatopquote {
+    font-size: 3rem;
+    line-height: 0;
+    vertical-align: -.2rem;
+}
+
+sashabottomquote {
+    font-size: 3rem;
+    line-height: 1.2rem;
+    vertical-align: -.7rem;
+}
+
+
+/* Цитата с вертикальной полосой слева */
+
+blockquote {
+    font-size: 1.1875rem;
+    font-style: italic;
+    margin: 0.625rem 2.5rem;
+    padding: 0.9375rem;
+}
+
+
+/* Code
+   ========================================================================== */
+
+code {
+    font-size: 1.1875rem;
+}
+
+
+/* Код переносится на следующую строку, если не помещается */
+
+pre {
+    white-space: pre-wrap;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    /* Иначе tab=8 в Rainbow коде*/
+    tab-size: 4;
+}
+
+
+/* ==========================================================================
+   Sasha-tags
+   ========================================================================== */
+
+
+/* Версия статьи */
+
+.SashaVersion {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+
+/* Заголовок H1 */
+
+.SashaHeader {
+    line-height: .7rem;
+    /* Интерлиньяж в заголовке */
+}
+
+
+/* Тень вверху страницы. */
+
+.SashaShadow {
+    font-family: 'Times New Roman';
+    font-size: 1.6rem;
+    /* Размер надписи */
+    width: auto;
+    text-shadow: 0 0 0.625rem rgba(255, 0, 222, 1), 0 0 1.25rem rgba(255, 0, 222, 1), 0 0 1.875rem rgba(255, 0, 222, 1), 0 0 2.5rem rgba(255, 0, 222, 1), 0 0 3.125rem rgba(255, 0, 222, 1), 0 0 3.75rem rgba(255, 0, 222, 1);
+    /* Параметры тени */
+}
+
+
+/* Расположение элемента по центру */
+
+.SashaCenter {
+    text-align: center;
+}
+
+
+/* Обрамление изображения с Настей*/
+
+.SashaSign {
+    /* Параметры рамки */
+    padding: 0.4375rem;
+    /* Поля внутри блока */
+    margin: 0.3125rem 0 0.3125rem 0;
+}
+
+
+/* Подчёркивание точками */
+
+SashaDot {
+    border-bottom: 0.0625rem dotted crimson;
+    /* Параметры линии */
+}
+
+
+/* TOC статей */
+
+.SashaTOC {
+    list-style-type: none;
+    /* Прячем исходную нумерацию */
+}
+
+.SashaTOC {
+    padding: 0 0 0 1rem;
+}
+
+
+/* Отступы в списке */
+
+.SashaOlMargin {
+    margin-left: 1rem;
+}
+
+
+/* Made inline block eliments */
+
+.SashaInline {
+    float: left;
+}
+
+
+/* Отступ сверху см. http://ru.stackoverflow.com/a/613468/199934 */
+
+.SashaEmNoColor,
+.WorkOnYourself {
+    margin: 5rem 0 0;
+}
+
+.SashaEmNoColor {
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   Scripts and plugins
+   ========================================================================== */
+
+
+/* Clipboard.js button */
+
+.SashaButton {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
